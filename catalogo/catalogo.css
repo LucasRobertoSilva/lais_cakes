@@ -3,8 +3,14 @@
   src: url(../fontes/TheSeasons.ttf);
 }
 
+body, html{
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .hidden {
   display: none;
+  pointer-events: none;
 }
 
 .decoration {
@@ -25,6 +31,7 @@ h1 {
 }
 
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: #f9f9f9;
@@ -38,7 +45,7 @@ header {
   width: 100%;
 }
 
-.wrapper{
+.wrapper {
   position: relative;
 }
 
@@ -64,11 +71,47 @@ header {
   color: #be9a5e;
 }
 
+.item:hover .price-conteiner{
+  opacity: 0.9;
+}
+
 .product-image {
   width: 100%;
 }
 
-.slide-button{
+.price-conteiner{
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e8e8e8;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3{
+  z-index: 3;
+  font-family: 'Bree Serif';
+  width: 150px;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+}
+.price{
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.slide-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -78,7 +121,7 @@ header {
   justify-content: center;
 }
 
-.right-button{
+.right-button {
   position: absolute;
   right: 0;
   top: 50%;
@@ -87,7 +130,7 @@ header {
   padding: 2px;
   background-color: #fff;
 }
-.left-button{
+.left-button {
   position: absolute;
   left: 0;
   top: 50%;
@@ -97,11 +140,10 @@ header {
   background-color: #fff;
 }
 
-.button-img{
+.button-img {
   width: 45px;
   z-index: 1;
 }
-
 
 .product-name {
   font-size: 1.5rem;
@@ -121,15 +163,18 @@ header {
 
 .product-img-conteiner {
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 75%;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 1000px) {
   .track {
     --visible_elements: 2;
+  }
+  header {
+    padding: 5px 30px;
   }
 }
 
@@ -160,13 +205,25 @@ header {
   .track {
     --visible_elements: 1;
   }
+  .decoration {
+    width: 300px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .button-img {
+    width: 40px;
+  }
 }
 
 @media (max-width: 400px) {
   body {
-    padding: 0 20px;
+    padding: 0 30px;
   }
-  header {
-    margin: 0 -10px;
+  .whatsapp-link {
+    padding: 12px;
+  }
+  .logo {
+    width: 100px;
   }
 }

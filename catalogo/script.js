@@ -16,7 +16,7 @@ function loadSlide() {
 
   track.style.transform = `translateX(-${index * (slideWidth + gap)}px)`;
 
-  if (index == 0) {
+  if (index <= 0) {
     leftBtn.classList.add("hidden");
     leftBtnImg.classList.add('hidden');
   } else {
@@ -24,7 +24,7 @@ function loadSlide() {
     leftBtnImg.classList.remove('hidden');
   }
 
-  if (index == slideElements.length - visible_elements) {
+  if (index >= slideElements.length - visible_elements) {
     rightBtn.classList.add("hidden");
     rightBtnImg.classList.add("hidden")
   } else {
