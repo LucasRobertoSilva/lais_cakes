@@ -13,8 +13,9 @@ function loadSlide() {
   const track_style = getComputedStyle(track);
   const gap = parseFloat(track_style.gap);
   const visible_elements = parseInt(track_style.getPropertyValue("--visible_elements"));  
-
-  track.style.transform = `translateX(-${index * (slideWidth + gap)}px)`;
+  console.log(gap);
+  
+  track.style.transform = `translateX(-${index * (slideWidth + gap - 1)}px)`;
 
   if (index <= 0) {
     leftBtn.classList.add("hidden");
