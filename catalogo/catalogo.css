@@ -67,7 +67,7 @@ header {
   border: 1px solid #be9a5e;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine){
   .item:hover .price-conteiner {
     opacity: 0.9;
   }
