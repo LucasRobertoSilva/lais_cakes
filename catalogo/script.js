@@ -45,4 +45,23 @@ rightBtn.addEventListener("click", () => {
   loadSlide();
 });
 
+
+  
+const itens = document.querySelectorAll(".item");
+
+itens.forEach(item => {item.addEventListener("click", function() {
+  const imgConteiner = this.children[0];
+  const priceconteiner = imgConteiner.children[1];
+  priceconteiner.classList.toggle("priceConteinerVisible");
+  const nameConsteiner = this.children[1]
+  const nameProduct = nameConsteiner.children[0]
+  nameProduct.classList.toggle("productNameVisible");
+
+})})
+
+// const imgConteiner = elemento.children[0];
+// priceconteiner = imgConteiner.children[1];
+
+// 
+
 loadSlide();
