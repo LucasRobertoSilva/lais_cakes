@@ -13,7 +13,6 @@ function loadSlide() {
   const track_style = getComputedStyle(track);
   const gap = parseFloat(track_style.gap);
   const visible_elements = parseInt(track_style.getPropertyValue("--visible_elements"));  
-  console.log(gap);
   
   track.style.transform = `translateX(-${index * (slideWidth + gap - 1)}px)`;
 
@@ -24,8 +23,8 @@ function loadSlide() {
     leftBtn.classList.remove("hidden");
     leftBtnImg.classList.remove('hidden');
   }
-
-  if (index >= slideElements.length - visible_elements) {
+  
+  if (index >= slideElements.length - visible_elements - 1) {
     rightBtn.classList.add("hidden");
     rightBtnImg.classList.add("hidden")
   } else {
