@@ -1,5 +1,5 @@
 const track = document.querySelector(".track");
-const slideElements = document.querySelectorAll(".item");
+const slideElements = document.querySelectorAll(".track .item");
 const leftBtn = document.querySelector(".left-button");
 const leftBtnImg = document.querySelector(".left-button-img");
 const rightBtn = document.querySelector(".right-button");
@@ -23,6 +23,13 @@ function loadSlide() {
     leftBtn.classList.remove("hidden");
     leftBtnImg.classList.remove('hidden');
   }
+
+  console.log(`index: ${index}`);
+  console.log(slideElements);
+  
+  console.log(`slideElements.length - visible_elements - 1 ${slideElements.length - visible_elements - 1}` );
+  
+  
   
   if (index >= slideElements.length - visible_elements - 1) {
     rightBtn.classList.add("hidden");
