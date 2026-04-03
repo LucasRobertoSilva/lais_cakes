@@ -51,11 +51,12 @@ header {
   /* left: 50%;
   transform: translateX(-50%); */
   width: 100vw;
+  padding: 0;
+  margin: 0;
   padding: 5px 100px;
   top: 0;
   background-color: #f9f9f9;
   opacity: 0.9;
-  margin: 0 -100px;
   z-index: 2;
 }
 
@@ -312,27 +313,19 @@ footer{
   flex-direction: column;
 }
 
+
 @media (max-width: 1000px) {
   :root {
     --visible_elements: 2;
   }
   header {
-    padding: 0 0;
-  }
-  .logo {
-    margin-left: 90px;
+    padding: 0 60px;
   }
   .product-class{
     padding: 0 50px;
   }
   .productClassButtons {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .logo {
-    margin: 15px 80px;
   }
 }
 
@@ -343,17 +336,15 @@ footer{
   .whatsapp-link {
     padding: 15px;
     margin-bottom: 0;
-    margin-right: 20px;
+  }
+  header{
+    padding: 0 30px;
   }
   .catalogo-link {
     padding: 30px 20px;
     margin-right: 0;
     margin-bottom: 40px;
     box-shadow: 3px 3px 20px 3px #e4d00a;
-  }
-  header {
-    width: 100vw;
-    margin: 0 -50px;
   }
   .product-class {
     padding: 0 50px;
@@ -364,8 +355,6 @@ footer{
   }
   .logo {
     width: 130px;
-    margin-left: 40px;
-    margin-right: 0;
   }
   .product-class {
     padding: 0 40px;
@@ -399,6 +388,5 @@ footer{
 
   .logo {
     width: 100px;
-    margin-left: 50px;
   }
 }
