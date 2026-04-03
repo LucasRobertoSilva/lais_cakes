@@ -43,6 +43,8 @@ h1 {
 header {
   position: -webkit-sticky;
   position: fixed;
+  /* left: 50%;
+  transform: translateX(-50%); */
   width: 100vw;
   padding: 5px 100px;
   top: 0;
@@ -78,7 +80,7 @@ header {
   overflow: hidden;
 
   /* para 2 elementos, muda o numero de gaps (n-1) e o numero da divisão (n) */
-  width: calc((100% - var(--gap_space)) / var(--visible_elements) - 2px);
+  width: calc((100% - var(--gap_space)) / var(--visible_elements));
   border: 1px solid #be9a5e;
   box-sizing: border-box;
 }
@@ -181,13 +183,17 @@ h3 {
   transition: color 0.3s ease;
 }
 
+:root {
+  --section_bottom_margin: 80px;
+}
+
 .productClassButtonsConteiner {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   gap: 20px;
   padding: 10px;
-  margin-bottom: 100px;
+  margin-bottom: var(--section_bottom_margin);
   justify-content: safe center;
 }
 
@@ -195,8 +201,20 @@ h3 {
   display: none; /* Esconde a barra de rolagem para um visual mais limpo */
 }
 
+.productSection {
+  scroll-margin-top: 150px;
+  margin-bottom: var(--section_bottom_margin);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --section_bottom_margin: 60px;
+  }
+}
+
 .productClassButtons {
   display: flex;
+  white-space: nowrap;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -208,7 +226,6 @@ h3 {
   padding: 15px 30px;
   font-size: 1.2rem;
   font-family: "poppins", sans-serif;
-  
 }
 @media (max-width: 630px) {
   .product-name {
@@ -272,34 +289,23 @@ h3 {
 }
 
 @media (max-width: 1000px) {
-  .track,
-  .itemConteiner {
+  :root {
     --visible_elements: 2;
   }
   header {
-    padding: 5px 30px;
+    padding: 0 0;
   }
   .logo {
     margin-left: 90px;
   }
-  .productClassButtons{
+  .productClassButtons {
     font-size: 1rem;
   }
-}
-
-.productSection{
-  scroll-margin-top: 150px;
 }
 
 @media (max-width: 700px) {
   .logo {
     margin: 15px 80px;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo {
-    margin: 15px 70px;
   }
 }
 
@@ -310,6 +316,7 @@ h3 {
   .whatsapp-link {
     padding: 15px;
     margin-bottom: 0;
+    margin-right: 20px;
   }
   .catalogo-link {
     padding: 30px 20px;
@@ -330,14 +337,13 @@ h3 {
   }
   .logo {
     width: 130px;
-    margin-left: 10px;
+    margin-left: 40px;
     margin-right: 0;
   }
   body {
     padding: 0 40px;
   }
-  .track,
-  .itemConteiner {
+  :root {
     --visible_elements: 1;
   }
   .decoration {
@@ -354,14 +360,18 @@ h3 {
 @media (max-width: 400px) {
   body {
     padding: 0 30px;
+    position: relative;
   }
   .whatsapp-link {
     padding: 12px;
+    margin-right: 10px;
   }
   .whatsapp-link i {
     font-size: 1.3rem;
   }
+
   .logo {
     width: 100px;
+    margin-left: 50px;
   }
 }
