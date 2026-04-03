@@ -24,7 +24,7 @@ function loadSlide() {
     leftBtnImg.classList.remove('hidden');
   }  
   
-  if (index >= slideElements.length - visible_elements - 1) {
+  if (index >= slideElements.length - visible_elements) {
     rightBtn.classList.add("hidden");
     rightBtnImg.classList.add("hidden")
   } else {
