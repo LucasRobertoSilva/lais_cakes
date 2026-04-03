@@ -13,7 +13,7 @@ html {
   padding: 0;
 }
 
-.product-class{
+.product-class {
   padding: 0 100px;
 }
 
@@ -57,7 +57,7 @@ header {
   top: 0;
   background-color: #f9f9f9;
   opacity: 0.9;
-  z-index: 2;
+  z-index: 10;
 }
 
 .slideshow {
@@ -299,12 +299,15 @@ h3 {
   margin-bottom: var(--margin-bottom);
 }
 
-p{
+p {
   margin-bottom: 10px;
+  font-size: 1.5rem;
   color: #f1f1f1;
+  width: 80%;
+  text-align: center;
 }
 
-footer{
+footer {
   background-color: #2b1a12;
   height: 130px;
   display: flex;
@@ -313,7 +316,6 @@ footer{
   flex-direction: column;
 }
 
-
 @media (max-width: 1000px) {
   :root {
     --visible_elements: 2;
@@ -321,11 +323,14 @@ footer{
   header {
     padding: 0 60px;
   }
-  .product-class{
+  .product-class {
     padding: 0 50px;
   }
   .productClassButtons {
     font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
   }
 }
 
@@ -337,7 +342,7 @@ footer{
     padding: 15px;
     margin-bottom: 0;
   }
-  header{
+  header {
     padding: 0 30px;
   }
   .catalogo-link {
@@ -370,6 +375,9 @@ footer{
   }
   .button-img {
     width: 40px;
+  }
+  p {
+    font-size: 0.6rem;
   }
 }
 
