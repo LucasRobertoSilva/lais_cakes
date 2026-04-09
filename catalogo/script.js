@@ -15,7 +15,7 @@ class Slider {
     this.track_style = getComputedStyle(this.track);
 
     this.slideElements = this.slideShow.querySelectorAll(".item");
-    this.slideWidth = this.slideElements[0].offsetWidth;    
+    this.slideWidth = this.slideElements[0].offsetWidth;
 
     this.visible_elements = parseInt(
       this.track_style.getPropertyValue("--visible_elements"),
@@ -42,22 +42,23 @@ class Slider {
       this.leftButtonImg.classList.remove("hidden");
     }
 
-    if(this.index >= this.slideElements.length - this.visible_elements){
-        this.rightButton.classList.add("hidden");
-        this.rightButtonImg.classList.add("hidden");
-    }else{
-        this.rightButton.classList.remove("hidden");
-        this.rightButtonImg.classList.remove("hidden");
+    if (this.index >= this.slideElements.length - this.visible_elements) {
+      this.rightButton.classList.add("hidden");
+      this.rightButtonImg.classList.add("hidden");
+    } else {
+      this.rightButton.classList.remove("hidden");
+      this.rightButtonImg.classList.remove("hidden");
     }
 
-    this.track.style.transform = `translateX(-${this.index * (this.slideWidth + this.gap)}px)`
+    this.track.style.transform = `translateX(-${this.index * (this.slideWidth + this.gap)}px)`;
 
-    if(this.visible_elements < 3){
-        document.getElementById("bolosCaseiros_Scroll").classList.add("hidden")
-        document.getElementById("bolosCaseirosLink").setAttribute('href', '#bolosCaseiros_Slide')
-    }
-    else{
-        document.getElementById("bolosCaseiros_Slide").classList.add("hidden")
+    if (this.visible_elements < 3) {
+      document.getElementById("bolosCaseiros_Scroll").classList.add("hidden");
+      document
+        .getElementById("bolosCaseirosLink")
+        .setAttribute("href", "#bolosCaseiros_Slide");
+    } else {
+      document.getElementById("bolosCaseiros_Slide").classList.add("hidden");
     }
   }
   addEvents() {
