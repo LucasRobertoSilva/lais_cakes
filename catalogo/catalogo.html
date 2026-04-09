@@ -26,7 +26,10 @@
 
       <div class="wrapper">
         <button class="left-button slide-button hidden">
-          <img src="../img/botao.png" class="button-img left-button-img" />
+          <img
+            src="../img/botao.png"
+            class="button-img left-button-img hidden"
+          />
         </button>
         <div class="slideshow">
           <div class="track">
@@ -348,7 +351,12 @@
           >Tortas Artesanais</a
         >
         <a class="productClassButtons" href="#bolosFestivos">Bolos Festivos</a>
-        <a class="productClassButtons" href="#bolosCaseiros">Bolos Caseiros</a>
+        <a
+          class="productClassButtons"
+          href="#bolosCaseiros"
+          id="bolosCaseirosLink"
+          >Bolos Caseiros</a
+        >
         <a class="productClassButtons" href="#paraPresentear"
           >Para Presentear</a
         >
@@ -356,245 +364,261 @@
 
       <section class="productSection tortasArtesanais" id="tortasArtesanais">
         <h1>Tortas Artesanais</h1>
-        <div class="itemConteiner">
-          <!-- produto -->
-
-          <div class="item">
+        <div class="wrapper">
+          <button class="left-button slide-button hidden">
             <img
-              src="../img/products/tortas-artesanais/cheseCake.png"
-              class="product-image"
+              src="../img/botao.png"
+              class="button-img left-button-img hidden"
             />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Cheese cake de frutas vermelhas
-              </h2>
-              <h4 class="other-product-description">
-                Melhor opção de sobremesa para quem gosta de um doce mais sutil
-              </h4>
-              <h3 class="other-product-price">R$ 265,00</h3>
+          </button>
+          <div class="slideshow">
+            <div class="track">
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/cheseCake.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Cheese cake de frutas vermelhas
+                  </h2>
+                  <h4 class="other-product-description">
+                    Melhor opção de sobremesa para quem gosta de um doce mais
+                    sutil
+                  </h4>
+                  <h3 class="other-product-price">R$ 265,00</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/uvanoffe.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Uvanoffe</h2>
+                  <h4 class="other-product-description">
+                    Sobremesa refrescante com base de biscoito amanteigado,
+                    creme de chantilly com uvas verdes
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/marcuja.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Torta de Maracujá Trufado
+                  </h2>
+                  <h4 class="other-product-description">
+                    Torta refrescante de maracujá com trufa de chocolate branco
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/redVelvet.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Torta Red Velvet
+                  </h2>
+                  <h4 class="other-product-description">
+                    Torta de cream cheese com chocolate branco, morango e base
+                    amanteigada, leve e refrescante
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/Banoffe.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Banoffe com nata cremosa
+                  </h2>
+                  <h4 class="other-product-description">
+                    Torta de banana com doce de leite, chantilly de nata e toque
+                    de canela
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/morangoffe.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Morangoffe</h2>
+                  <h4 class="other-product-description">
+                    Torta de chocolate ao leite com morangos, chantilly fresco e
+                    suspiros, cremosa e equilibrada.
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/limão.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Torta de limão Siciliano
+                  </h2>
+                  <h4 class="other-product-description">
+                    Torta de limão siciliano e taiti com massa e recheio assados
+                  </h4>
+                  <h3 class="other-product-price">R$247,00</h3>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="../img/products/tortas-artesanais/tortaHolandesa.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Torta Holandesa
+                  </h2>
+                  <h4 class="other-product-description">
+                    Torta em versão gourmet, com creme trufado de chocolate
+                    branco, chantilly fresco
+                  </h4>
+                  <h3 class="other-product-price">R$ 247,00</h3>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/uvanoffe.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Uvanoffe</h2>
-              <h4 class="other-product-description">
-                Sobremesa refrescante com base de biscoito amanteigado, creme de
-                chantilly com uvas verdes
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/marcuja.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Torta de Maracujá Trufado
-              </h2>
-              <h4 class="other-product-description">
-                Torta refrescante de maracujá com trufa de chocolate branco
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/redVelvet.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Torta Red Velvet</h2>
-              <h4 class="other-product-description">
-                Torta de cream cheese com chocolate branco, morango e base
-                amanteigada, leve e refrescante
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/Banoffe.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Banoffe com nata cremosa
-              </h2>
-              <h4 class="other-product-description">
-                Torta de banana com doce de leite, chantilly de nata e toque de
-                canela
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/morangoffe.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Morangoffe</h2>
-              <h4 class="other-product-description">
-                Torta de chocolate ao leite com morangos, chantilly fresco e
-                suspiros, cremosa e equilibrada.
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/limão.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Torta de limão Siciliano
-              </h2>
-              <h4 class="other-product-description">
-                Torta de limão siciliano e taiti com massa e recheio assados
-              </h4>
-              <h3 class="other-product-price">R$247,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/tortas-artesanais/tortaHolandesa.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Torta Holandesa</h2>
-              <h4 class="other-product-description">
-                Torta em versão gourmet, com creme trufado de chocolate branco,
-                chantilly fresco
-              </h4>
-              <h3 class="other-product-price">R$ 247,00</h3>
-            </div>
-          </div>
+          <button class="right-button slide-button">
+            <img src="../img/botao.png" class="button-img right-button-img" />
+          </button>
         </div>
       </section>
       <section class="productSection bolosFestivos" id="bolosFestivos">
         <h1>Bolos Festivos</h1>
-        <div class="itemConteiner">
-          <!-- produto -->
-
-          <div class="item">
+        <div class="wrapper">
+          <button class="left-button slide-button hidden">
             <img
-              src="../img/products/bolos-festivos/Bolos-cobertos-com-buttercream.png"
-              class="product-image"
+              src="../img/botao.png"
+              class="button-img left-button-img hidden"
             />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Bolos cobertos com buttercream
-              </h2>
-              <h4 class="other-product-description">
-                Bolos espatulados com cobertura de buttercream saborizado,
-                totalmente personalizados conforme o gosto do cliente. Envie uma
-                foto de inspiração para criar o modelo desejado
-              </h4>
-              <h3 class="other-product-price">R$ 129,90</h3>
+          </button>
+          <div class="slideshow">
+            <div class="track">
+              <div class="item">
+                <img
+                  src="../img/products/bolos-festivos/Bolos-cobertos-com-buttercream.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolos cobertos com buttercream
+                  </h2>
+                  <h4 class="other-product-description">
+                    Bolos espatulados com cobertura de buttercream saborizado,
+                    totalmente personalizados conforme o gosto do cliente. Envie
+                    uma foto de inspiração para criar o modelo desejado
+                  </h4>
+                  <h3 class="other-product-price">R$ 129,90</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-festivos/Bolo-vulcao.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Bolos vulcão</h2>
+                  <h4 class="other-product-description">
+                    Bolo vulcão com massas disponíveis nos sabores: chocolate
+                    com recheio de brigadeiro de chocolate ao leite, baunilha
+                    com cobertura trufada de chocolate branco e ninho e cenoura
+                    com cobertura de chocolate ao leite
+                  </h4>
+                  <h3 class="other-product-price">R$ 189,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-festivos/Red-Velvet.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolo Red velvet
+                  </h2>
+                  <h4 class="other-product-description">
+                    Massa de brownie bem chocolatuda com cobertura de brigadeiro
+                    trufado de chocolate ao leite ou ninho, decorado com frutas
+                    da época
+                  </h4>
+                  <h3 class="other-product-price">R$ 289,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-festivos/Brownie.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Brownie</h2>
+                  <h4 class="other-product-description">
+                    Brownie com bastante chocolate com brigadeiro trufado e
+                    frutas frescas
+                  </h4>
+                  <h3 class="other-product-price">R$ 324,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-festivos/Frutas.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolo de frutas
+                  </h2>
+                  <h4 class="other-product-description">
+                    Bolo de melancia com decoração de frutas diversificadas de
+                    acordo com o pedido cliente
+                  </h4>
+                  <h3 class="other-product-price">R$ 349,00</h3>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/bolos-festivos/Bolo-vulcao.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Bolos vulcão</h2>
-              <h4 class="other-product-description">
-                Bolo vulcão com massas disponíveis nos sabores: chocolate com
-                recheio de brigadeiro de chocolate ao leite, baunilha com
-                cobertura trufada de chocolate branco e ninho e cenoura com
-                cobertura de chocolate ao leite
-              </h4>
-              <h3 class="other-product-price">R$ 189,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/bolos-festivos/Red-Velvet.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Bolo Red velvet</h2>
-              <h4 class="other-product-description">
-                Massa de brownie bem chocolatuda com cobertura de brigadeiro
-                trufado de chocolate ao leite ou ninho, decorado com frutas da
-                época
-              </h4>
-              <h3 class="other-product-price">R$ 289,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/bolos-festivos/Brownie.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Brownie</h2>
-              <h4 class="other-product-description">
-                Brownie com bastante chocolate com brigadeiro trufado e frutas
-                frescas
-              </h4>
-              <h3 class="other-product-price">R$ 324,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/bolos-festivos/Frutas.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Bolo de frutas</h2>
-              <h4 class="other-product-description">
-                Bolo de melancia com decoração de frutas diversificadas de
-                acordo com o pedido cliente
-              </h4>
-              <h3 class="other-product-price">R$ 349,00</h3>
-            </div>
-          </div>
+          <button class="right-button slide-button">
+            <img src="../img/botao.png" class="button-img right-button-img" />
+          </button>
         </div>
       </section>
-      <section class="productSection bolosCaseiros" id="bolosCaseiros">
+      <section class="productSection bolosCaseiros" id="bolosCaseiros_Scroll">
         <h1>Bolos Caseiros</h1>
         <div class="itemConteiner">
           <!-- produto -->
@@ -654,85 +678,173 @@
           </div>
         </div>
       </section>
+      <section class="productSection bolosCaseiros" id="bolosCaseiros_Slide">
+        <h1>Bolos Caseiros</h1>
+
+        <div class="wrapper">
+          <button class="left-button slide-button hidden">
+            <img
+              src="../img/botao.png"
+              class="button-img left-button-img hidden"
+            />
+          </button>
+          <div class="slideshow">
+            <div class="track">
+              <div class="item">
+                <img
+                  src="../img/products/bolos-caseiros/limão.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolo limão siciliano e mirtilo
+                  </h2>
+                  <h4 class="other-product-description">
+                    Bolo úmido com massa de iogurte com limão siciliano e
+                    mirtilos, leve e refrescante, finalizado com glacê, raspas e
+                    frutas
+                  </h4>
+                  <h3 class="other-product-price">R$ 189,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-caseiros/laranja.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolo de Laranja
+                  </h2>
+                  <h4 class="other-product-description">
+                    Bolo de laranja Bahia, macio e úmido, acompanhado de calda
+                    artesanal à parte, com decoração de laranja seca, cravo da
+                    Índia e folas de hortelã para infusão.
+                  </h4>
+                  <h3 class="other-product-price">R$ 64,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/bolos-caseiros/fubá.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Bolo de fubá com goiabada
+                  </h2>
+                  <h4 class="other-product-description">
+                    Bolo fofo de fubá com pedaços de goiabada dentro e uma
+                    cobertura cremosa
+                  </h4>
+                  <h3 class="other-product-price">R$ 64,00</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="right-button slide-button">
+            <img src="../img/botao.png" class="button-img right-button-img" />
+          </button>
+        </div>
+      </section>
       <section class="productSection paraPresentear" id="paraPresentear">
         <h1>Para Presentear</h1>
-        <div class="itemConteiner">
-          <!-- produto -->
-
-          <div class="item">
+        <div class="wrapper">
+          <button class="left-button slide-button hidden">
             <img
-              src="../img/products/para-presentear/brownie-beats.png"
-              class="product-image"
+              src="../img/botao.png"
+              class="button-img left-button-img hidden"
             />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Brownie Beats</h2>
-              <h4 class="other-product-description">
-                Brownie beats na caixa presenteavél, cobertos com chocolate
-                nobre de alta qualidade, perfeitos para presentear ou aproveitar
-                a qualquer momento
-              </h4>
-              <h3 class="other-product-price">R$ 54,00</h3>
+          </button>
+          <div class="slideshow">
+            <div class="track">
+              <div class="item">
+                <img
+                  src="../img/products/para-presentear/brownie-beats.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Brownie Beats</h2>
+                  <h4 class="other-product-description">
+                    Brownie beats na caixa presenteavél, cobertos com chocolate
+                    nobre de alta qualidade, perfeitos para presentear ou
+                    aproveitar a qualquer momento
+                  </h4>
+                  <h3 class="other-product-price">R$ 54,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/para-presentear/onca-pintada.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">Onça Pintada</h2>
+                  <h4 class="other-product-description">
+                    Ovo de chocolate ao leite pintado à mão, com camada de
+                    chocolate branco, praliné de castanha-do-pará e amendoim, e
+                    recheio de brigadeiro
+                  </h4>
+                  <h3 class="other-product-price">R$ 289,00</h3>
+                </div>
+              </div>
+
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/para-presentear/vegano.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Ovos veganos e sem açúcar
+                  </h2>
+                  <h4 class="other-product-description">
+                    Ovos com chocolate especial. Sem glúten, Sem lácteos, Sem
+                    açúcar, Linha vegana e diet * Não atende celíacos.
+                  </h4>
+                  <h3 class="other-product-price">R$ 65,00</h3>
+                </div>
+              </div>
+              <!-- produto -->
+
+              <div class="item">
+                <img
+                  src="../img/products/para-presentear/kit-caca-aos-ovos.png"
+                  class="product-image"
+                />
+                <div class="infoConteiner">
+                  <h2 class="product-name other-product-name">
+                    Kit caça aos ovos
+                  </h2>
+                  <h4 class="other-product-description">
+                    Pegadas adesivas e pistas para brincar e se divertir
+                    procurando os ovos
+                  </h4>
+                  <h3 class="other-product-price">R$ 39,00</h3>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/para-presentear/onca-pintada.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Onça Pintada</h2>
-              <h4 class="other-product-description">
-                Ovo de chocolate ao leite pintado à mão, com camada de chocolate
-                branco, praliné de castanha-do-pará e amendoim, e recheio de
-                brigadeiro
-              </h4>
-              <h3 class="other-product-price">R$ 289,00</h3>
-            </div>
-          </div>
-
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/para-presentear/vegano.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">
-                Ovos veganos e sem açúcar
-              </h2>
-              <h4 class="other-product-description">
-                Ovos com chocolate especial. Sem glúten, Sem lácteos, Sem
-                açúcar, Linha vegana e diet * Não atende celíacos.
-              </h4>
-              <h3 class="other-product-price">R$ 65,00</h3>
-            </div>
-          </div>
-          <!-- produto -->
-
-          <div class="item">
-            <img
-              src="../img/products/para-presentear/kit-caca-aos-ovos.png"
-              class="product-image"
-            />
-            <div class="infoConteiner">
-              <h2 class="product-name other-product-name">Kit caça aos ovos</h2>
-              <h4 class="other-product-description">
-                Pegadas adesivas e pistas para brincar e se divertir procurando
-                os ovos
-              </h4>
-              <h3 class="other-product-price">R$ 39,00</h3>
-            </div>
-          </div>
+          <button class="right-button slide-button">
+            <img src="../img/botao.png" class="button-img right-button-img" />
+          </button>
         </div>
       </section>
     </div>
     <footer>
       <p>© 2026 Laís Cakes. Todos os direitos reservados.</p>
-      <p style="margin-bottom: 0;">
+      <p style="margin-bottom: 0">
         Feito com carinho para adoçar seus momentos | Contato: (11) 95058-8450
       </p>
     </footer>

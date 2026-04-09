@@ -1,66 +1,74 @@
-const track = document.querySelector(".track");
-const slideElements = document.querySelectorAll(".track .item");
-const leftBtn = document.querySelector(".left-button");
-const leftBtnImg = document.querySelector(".left-button-img");
-const rightBtn = document.querySelector(".right-button");
-const rightBtnImg = document.querySelector(".right-button-img")
+class Slider {
+  constructor(wrapper) {
+    this.wrapper = wrapper;
+    this.index = 0;
 
-let index = 0;
+    this.leftButton = this.wrapper.querySelector(".left-button");
+    this.leftButtonImg = this.leftButton.querySelector(".left-button-img");
 
-function loadSlide() {
-  const slideWidth = slideElements[0].offsetWidth;
+    this.rightButton = this.wrapper.querySelector(".right-button");
+    this.rightButtonImg = this.rightButton.querySelector(".right-button-img");
 
-  const track_style = getComputedStyle(track);
-  const gap = parseFloat(track_style.gap);
-  const visible_elements = parseInt(track_style.getPropertyValue("--visible_elements"));    
+    this.slideShow = this.wrapper.querySelector(".slideshow");
 
-  track.style.transform = `translateX(-${index * (slideWidth + gap)}px)`;
+    this.track = this.slideShow.querySelector(".track");
+    this.track_style = getComputedStyle(this.track);
 
-  if (index <= 0) {
-    leftBtn.classList.add("hidden");
-    leftBtnImg.classList.add('hidden');
-  } else {
-    leftBtn.classList.remove("hidden");
-    leftBtnImg.classList.remove('hidden');
-  }  
-  
-  if (index >= slideElements.length - visible_elements) {
-    rightBtn.classList.add("hidden");
-    rightBtnImg.classList.add("hidden")
-  } else {
-    rightBtn.classList.remove("hidden");
-    rightBtnImg.classList.remove("hidden");
+    this.slideElements = this.slideShow.querySelectorAll(".item");
+    this.slideWidth = this.slideElements[0].offsetWidth;    
+
+    this.visible_elements = parseInt(
+      this.track_style.getPropertyValue("--visible_elements"),
+    );
+    this.gap = parseFloat(this.track_style.gap);
+
+    this.addEvents();
+    this.loadSlide();
   }
+  prev() {
+    this.index--;
+    this.loadSlide();
+  }
+  next() {
+    this.index++;
+    this.loadSlide();
+  }
+  loadSlide() {
+    if (this.index <= 0) {
+      this.leftButton.classList.add("hidden");
+      this.leftButtonImg.classList.add("hidden");
+    } else {
+      this.leftButton.classList.remove("hidden");
+      this.leftButtonImg.classList.remove("hidden");
+    }
 
+    if(this.index >= this.slideElements.length - this.visible_elements){
+        this.rightButton.classList.add("hidden");
+        this.rightButtonImg.classList.add("hidden");
+    }else{
+        this.rightButton.classList.remove("hidden");
+        this.rightButtonImg.classList.remove("hidden");
+    }
+
+    this.track.style.transform = `translateX(-${this.index * (this.slideWidth + this.gap)}px)`
+
+    if(this.visible_elements < 3){
+        document.getElementById("bolosCaseiros_Scroll").classList.add("hidden")
+        document.getElementById("bolosCaseirosLink").setAttribute('href', '#bolosCaseiros_Slide')
+    }
+    else{
+        document.getElementById("bolosCaseiros_Slide").classList.add("hidden")
+    }
+  }
+  addEvents() {
+    this.leftButton.addEventListener("click", () => this.prev());
+    this.rightButton.addEventListener("click", () => this.next());
+  }
 }
 
-leftBtn.addEventListener("click", () => {
-  index--;
-  loadSlide();
+const sliders = document.querySelectorAll(".wrapper");
+console.log(sliders);
+
+sliders.forEach((slider) => {
+  new Slider(slider);
 });
-
-rightBtn.addEventListener("click", () => {
-  index++;
-  loadSlide();
-});
-
-
-  
-const itens = document.querySelectorAll(".item");
-
-itens.forEach(item => {item.addEventListener("click", function() {
-  const imgConteiner = this.children[0];
-  const priceconteiner = imgConteiner.children[1];
-  priceconteiner.classList.toggle("priceConteinerVisible");
-  const nameConsteiner = this.children[1]
-  const nameProduct = nameConsteiner.children[0]
-  nameProduct.classList.toggle("productNameVisible");
-
-})})
-
-// const imgConteiner = elemento.children[0];
-// priceconteiner = imgConteiner.children[1];
-
-// 
-
-loadSlide();

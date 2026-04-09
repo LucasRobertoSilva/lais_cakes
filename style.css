@@ -118,10 +118,6 @@ p {
   transition: background-color 0.5s ease;
 }
 
-.whatsapp-link:hover {
-  background-color: #aae3aa;
-}
-
 .whatsapp-link > i {
   font-size: 1.5rem;
   margin-right: 3px;
