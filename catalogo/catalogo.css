@@ -86,7 +86,7 @@ header {
   overflow: hidden;
 
   /* para 2 elementos, muda o numero de gaps (n-1) e o numero da divisão (n) */
-  width: calc((100% - var(--gap_space)) / var(--visible_elements));
+  width: round(down, calc((100% - var(--gap_space)) / var(--visible_elements)), 1px);
   border: 1px solid #be9a5e;
   box-sizing: border-box;
 }
@@ -104,7 +104,7 @@ header {
   display: block;
 }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
   .item:hover .price-conteiner {
     opacity: 0.9;
   }

@@ -67,6 +67,19 @@ class Slider {
   }
 }
 
+if (window.matchMedia("(pointer: coarse)").matches) {
+  document.querySelectorAll(".item-price-hover").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const priceConteiner =
+        event.currentTarget.querySelector(".price-conteiner");
+      const productName = event.currentTarget.querySelector(".product-name");
+
+      priceConteiner.classList.toggle("priceConteinerVisible");
+      productName.classList.toggle("productNameVisible");
+    });
+  });
+}
+
 const sliders = document.querySelectorAll(".wrapper");
 console.log(sliders);
 
