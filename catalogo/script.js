@@ -81,7 +81,6 @@ if (window.matchMedia("(pointer: coarse)").matches) {
 }
 
 const sliders = document.querySelectorAll(".wrapper");
-console.log(sliders);
 
 sliders.forEach((slider) => {
   new Slider(slider);

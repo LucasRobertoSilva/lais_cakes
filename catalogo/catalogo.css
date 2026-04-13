@@ -84,7 +84,6 @@ header {
   flex: 0 0 auto;
   cursor: pointer;
   overflow: hidden;
-
   /* para 2 elementos, muda o numero de gaps (n-1) e o numero da divisão (n) */
   width: round(down, calc((100% - var(--gap_space)) / var(--visible_elements)), 1px);
   border: 1px solid #be9a5e;
@@ -94,7 +93,6 @@ header {
 .product-img-conteiner {
   display: flex;
   justify-content: center;
-  height: 75%;
   overflow: hidden;
   position: relative;
 }
@@ -266,22 +264,29 @@ h3 {
 }
 
 .infoConteiner {
-  display: grid;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   grid-template-rows: auto 1fr auto;
   margin-top: 25px;
-  height: 25%;
   margin-left: 30px;
 }
 
 :root {
-  --margin-bottom: 10px;
+  --margin-bottom: 20px;
 }
 
 .other-product-name {
   margin: 0;
+  height: 60px;
   margin-bottom: var(--margin-bottom);
+  display: flex;
+  align-items: center;
+}
+
+.mini-other-product-name{
+  font-size: 1.3rem;
+
 }
 
 .other-product-description {
@@ -289,6 +294,7 @@ h3 {
   font-weight: normal;
   margin-bottom: var(--margin-bottom);
   width: 90%;
+  height: 100px;
 }
 
 .other-product-price {
