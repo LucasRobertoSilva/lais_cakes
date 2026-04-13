@@ -240,9 +240,12 @@ h3 {
   font-size: 1.2rem;
   font-family: "poppins", sans-serif;
 }
-@media (max-width: 630px) {
+@media (max-width: 700px) {
   .product-name {
     font-size: 1.1rem;
+  }
+  .other-product-description{
+    font-size: 0.9rem;
   }
 }
 
@@ -278,7 +281,6 @@ h3 {
 
 .other-product-name {
   margin: 0;
-  height: 60px;
   margin-bottom: var(--margin-bottom);
   display: flex;
   align-items: center;
@@ -294,7 +296,6 @@ h3 {
   font-weight: normal;
   margin-bottom: var(--margin-bottom);
   width: 90%;
-  height: 100px;
 }
 
 .other-product-price {
@@ -322,7 +323,7 @@ footer {
   flex-direction: column;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   :root {
     --visible_elements: 2;
   }
@@ -402,5 +403,8 @@ footer {
 
   .logo {
     width: 100px;
+  }
+  .product-name{
+    font-size: 1.3rem;
   }
 }
