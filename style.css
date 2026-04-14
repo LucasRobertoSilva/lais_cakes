@@ -18,6 +18,10 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  overscroll-behavior: none;
+}
+
 .cakes {
   font-family: "Bryndan Write", "Bree Serif", sans-serif;
   font-size: 3rem;
